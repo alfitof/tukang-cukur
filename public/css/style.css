@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.4s ease;
+}
+
+:root {
+  --body-color: #996633;
+  --nav-color: #332211;
+  --side-nav: #553311;
+  --text-color: #fff;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--body-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s;
+  background-image: url('../backgroundbarber.jpg');
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  background-color: var(--nav-color);
+  z-index: 100;
+}
+
+nav .nav-bar {
+  position: relative;
+  height: 100%;
+  max-width: 1000px;
+  width: 100%;
+  background-color: var(--nav-color);
+  margin: 0 5px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+nav .nav-bar .sidebarOpen {
+  color: var(--text-color);
+  font-size: 25px;
+  padding: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+nav .nav-bar .logo a {
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+  margin: 10px 5px;
+}
+
+.menu .logo-toggle {
+  display: none;
+}
+
+.nav-bar .nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar .nav-links li {
+  margin: 10px;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.nav-links li a {
+  position: relative;
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 10px;
+}
+
+.nav-links li a::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: var(--text-color);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-links li:hover a::before {
+  opacity: 1;
+}
+
+#orderTable {
+  vertical-align: middle;
+  text-align: center;
+  width: 85%;
+  margin: auto;
+  margin-top: 8%;
+}
+
+.nav-links li button {
+  padding: 3px;
+  margin-top: 25px;
+  background-color: transparent;
+  border-radius: 5px;
+  color: white;
+  border-color: transparent;
+}
+
+.nav-links li button:hover {
+  border-color: white;
+  color: var(--nav-color);
+  background-color: white;
+  cursor: pointer;
+}
+
+.pagination > li > a {
+  background-color: white;
+  color: rgb(124, 78, 51);
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+  color: rgb(124, 78, 51);
+  background-color: #eee;
+  border-color: #ddd;
+}
+
+.pagination > .active > a {
+  color: white;
+  background-color: rgb(124, 78, 51);
+  border: solid 1px rgb(124, 78, 51);
+}
+
+.pagination > .active > a:hover {
+  background-color: rgb(124, 78, 51);
+  border: solid 1px rgb(124, 78, 51);
+}
+
+@media (max-width: 790px) {
+  nav .nav-bar .sidebarOpen {
+    display: block;
+  }
+
+  .menu {
+    position: fixed;
+    height: 100%;
+    width: 320px;
+    left: -100%;
+    top: 0;
+    padding: 20px;
+    background-color: var(--side-nav);
+    z-index: 100;
+    transition: all 0.4s ease;
+  }
+
+  nav.active .menu {
+    left: -0%;
+  }
+
+  nav.active .nav-bar .navLogo a {
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .menu .logo-toggle {
+    display: block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-toggle .siderbarClose {
+    color: var(--text-color);
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .nav-bar .nav-links {
+    flex-direction: column;
+    padding-top: 30px;
+  }
+
+  .nav-links li a {
+    display: block;
+    margin-top: 20px;
+  }
+  .nav-links li button {
+    display: block;
+    margin-top: 20px;
+    margin-right: 930px;
+  }
+}
+
+.container {
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0 20px;
+}
+
+.container .forms {
+  display: flex;
+  align-items: center;
+  height: 600px;
+  margin-top: 5rem;
+  width: 200%;
+  transition: height 0.2s ease;
+}
+.container .form {
+  width: 50%;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: margin-left 0.18s ease;
+}
+
+.container .form .title {
+  position: relative;
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.form .title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  background-color: var(--nav-color);
+  border-radius: 25px;
+}
+
+.form .input-field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.input-field input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 0 35px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 2px solid #ccc;
+  border-top: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) {
+  border-bottom-color: var(--nav-color);
+}
+
+.input-field i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 23px;
+  transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ i {
+  color: var(--nav-color);
+}
+
+.input-field i.icon {
+  left: 0;
+}
+
+.form .button {
+  margin-top: 35px;
+}
+
+.form .button input {
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  background-color: var(--nav-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button input:hover {
+  background-color: var(--body-color);
+}
+.form .login-signup {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.container .home {
+  background-color: transparent;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 400;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: -30px;
+  padding-right: -30px;
+}
+
+.container1 {
+  color: #fff;
+  align-items: center;
+  padding-top: 410px;
+}
+
+.testimony-bottom {
+  padding-top: 15px;
+}

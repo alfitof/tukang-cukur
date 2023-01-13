@@ -1,0 +1,12 @@
+{
+    "card": [
+      { "id": 1, "nama": "Ado Puts", "review": "Barbernya bisa cukur mohawk mepet", "gambar": "ado.jpg"},
+      { "id": 2, "nama": "Iver Rapper",  "review": "Pokonya mantep dah, kaya cukur di bintaro", "gambar": "rapper.jpg"},
+      { "id": 3, "nama": "Han Simba",  "review": "Rawr", "gambar": "simba.jpg"},
+      { "id": 4, "nama": "Hakiki Gaming", "review": "Barbernya profesional", "gambar": "gamer.jpg"},
+      { "id": 5, "nama": "Nugi Skuy", "review": "Wawasan barbernya luas banget", "gambar": "chad.jpg"},
+      { "id": 6, "nama": "King Gumi",  "review": "Abangnya ga malu nyukur saya lagi rapat", "gambar": "king.jpg"},
+      { "id": 7, "nama": "Fito Einstein", "review": "Mantep, bisa kretek juga", "gambar": "kretek.jpg"},
+      { "id": 8, "nama": "Vena 1872", "review": "Qamoe Nanyeua??", "gambar": "cepak.jpg"}
+    ]
+}
